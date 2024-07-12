@@ -1,0 +1,176 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+.list {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 32px;
+    margin-bottom: 45px;
+}
+
+.card h5 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.card>div {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card button {
+    padding: 8px 22px;
+    background: #FFF0E6;
+    color: #D15700;
+    font-weight: bold;
+    border-radius: 15px;
+}
+
+.card img {
+    position: relative;
+    top: -5px;
+    transition: top ease 0.1s;
+}
+
+.card img:hover {
+    top: 0;
+}
+
+/* popup */
+.popup {
+    position: absolute;
+    inset: 0;
+    background: #00000085;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup__content {
+    width: 750px;
+    height: 500px;
+    border-radius: 10px;
+    padding: 20px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.popup__close {
+    position: absolute;
+    right: -20px;
+    top: 5px;
+    font-size: 22px;
+    color: red;
+    cursor: pointer;
+}
+
+.texts {
+    padding: 50px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.texts .name {
+    font-size: 32px;
+}
+
+.texts .desc {
+    font-size: 20px;
+}
+
+.texts button {
+    background: #d15700;
+    color: #fff;
+    font-size: 18px;
+    padding: 8px 22px;
+    width: 100%;
+    border-radius: 30px;
+}
+.img {
+    width: 70%;
+    margin: auto;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .cart {
+    padding: 8px 32px;
+    border-radius: 30px;
+    background-color: tomato;
+    color: #fff;
+}
+.cart-list {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 450px;
+    background: #fff;
+    height: 100vh;
+    display: none;
+}
+.overlay {
+    position: absolute;
+    width: 100%;
+    inset: 0;
+    height: 100vh;
+    background: #00000095;
+    display: none;
+}
+.cart-close{
+    position: absolute;
+    background: red;
+    top: 50%;
+    transform: translateY(-50);
+    left: -40px;
+    padding: 6px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #fff;
+}
+@media (max-width: 600px) {
+    .list {
+        flex-direction: column;
+        column-gap: 50px;
+        align-items: center;
+    }
+}
